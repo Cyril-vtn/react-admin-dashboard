@@ -18,7 +18,7 @@ const Synthese = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px">
+    <Box m="20px" >
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="Synthese" subtitle="Bienvenue sur votre compte admin" />

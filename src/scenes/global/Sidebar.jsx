@@ -41,8 +41,11 @@ const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
+// const userView = window.screen.availHeight
+
   return (
     <Box
+    
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
@@ -59,6 +62,7 @@ const Sidebar = () => {
         "& .pro-menu-item.active": {
           color: "#2196f3 !important",
         },
+        // height: `${userView}px`,
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
