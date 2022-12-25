@@ -13,10 +13,12 @@ import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
 
+
+
 const Synthese = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  console.log(window.screen.width >= 1600)
   return (
     <Box m="20px" >
       {/* HEADER */}
@@ -202,7 +204,9 @@ const Synthese = () => {
         </Box>
 
         {/* ROW 3 */}
-        <Box
+       {window.screen.width > 1600 ? <>
+       
+       <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
@@ -260,6 +264,8 @@ const Synthese = () => {
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>
+       </> : null }
+        
       </Box>
     </Box>
   );
